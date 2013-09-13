@@ -35,10 +35,16 @@ public class Strings {
 
 	public static boolean isAbcdarian(String str){
 		for (int i=0; i<str.length(); i++) {
-			if (str.charAt(i) < str.charAt(i+1)) {
+			if (i+1 > str.length()) {
+				if (str.charAt(i) < str.charAt(i+1)) {
 					is = true;
-			}else{
+				}else{
 					return false;
+				}
+			}else{
+				if (str.charAt(str.length()-1) >= str.charAt(str.length())) {
+					return false;
+				}
 			}
 		}
 		return true;
