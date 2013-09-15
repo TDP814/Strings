@@ -30,24 +30,28 @@ public class Strings {
 		// } else{
 			// System.out.println("No.");
 		// }
-		System.out.println(isAbcdarian("abcdef"));
+		// System.out.println(isAbcdarian("abcdef"));
+
 	}
 
 	public static boolean isAbcdarian(String str){
 		for (int i=0; i<str.length(); i++) {
-			if (i+1 > str.length()) {
-				if (str.charAt(i) < str.charAt(i+1)) {
-					is = true;
-				}else{
-					return false;
-				}
+			if (str.charAt(i) < str.charAt(i+1)) {
+				is = true;
 			}else{
-				if (str.charAt(str.length()-1) >= str.charAt(str.length())) {
-					return false;
-				}
+				return false;
 			}
+			
 		}
 		return true;
+	}
+
+	public static boolean isDupledrome(){
+
+	}
+
+	public static boolean captainCrunch(){
+		
 	}
 
 	public static int count(String s, String t){
