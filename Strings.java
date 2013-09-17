@@ -48,13 +48,16 @@ public class Strings {
 
 	public static boolean isDupledrome(String s){
 		for (int i = 0; i<s.length(); i+2) {
-			 
+			 if((s.charAt(i) != s.charAt(i + 1)){
+			 	return false;
+			 }
+			return true;
 		}
 	}
 
 	public static boolean captainCrunch(String s){
 		for (int i=0; i<s.lenght; i++) {
-			is= s+13
+			charAt(s) = s+13
 		}
 	}
 
