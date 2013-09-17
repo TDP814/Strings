@@ -56,9 +56,18 @@ public class Strings {
 	}
 
 	public static boolean captainCrunch(String s){
+		String result = "";
+		
 		for (int i=0; i<s.lenght; i++) {
-			charAt(s) = s+13
+			char c = s.charAt(i);
+			char coded = (char)((int)c + 13)
+			
+			String str = "" + c;
+			
+			result = result +coded;
 		}
+		System.out.println(result);
+		return result;
 	}
 
 	public static int count(String s, String t){
