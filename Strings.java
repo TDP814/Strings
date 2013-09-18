@@ -30,24 +30,43 @@ public class Strings {
 		// } else{
 			// System.out.println("No.");
 		// }
-		System.out.println(isAbcdarian("abcdef"));
+		 System.out.println(isAbcdarian("abcdef"));
+
 	}
 
 	public static boolean isAbcdarian(String str){
-		for (int i=0; i<str.length()-1; i++) {
-			// if (i+1 > str.length()) {
-				if (str.charAt(i) < str.charAt(i+1)) {
-					is = true;
-				}else{
-					return false;
-				}
-			// }else{
-				// if (str.charAt(str.length()-1) >= str.charAt(str.length())) {
-					// return false;
-				// }
-			// }
+		for (int i=0; i<str.length(); i++) {
+			if (str.charAt(i) < str.charAt(i+1)) {
+				return true;
+			}else{
+				return false;
+			}
 		}
 		return true;
+	}
+
+	public static boolean isDupledrome(String s){
+		for (int i = 0; i<s.length(); i+2) {
+			 if((s.charAt(i) != s.charAt(i + 1)){
+			 	return false;
+			 }
+			return true;
+		}
+	}
+
+	public static boolean captainCrunch(String s){
+		String result = "";
+		
+		for (int i=0; i<s.lenght; i++) {
+			char c = s.charAt(i);
+			char coded = (char)((int)c + 13)
+			
+			String str = "" + c;
+			
+			result = result +coded;
+		}
+		System.out.println(result);
+		return result;
 	}
 
 	public static int count(String s, String t){
