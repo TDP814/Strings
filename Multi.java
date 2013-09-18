@@ -78,4 +78,8 @@ public class Multi {
 		}
 		return a;
 	}
+
+	public static int[][] rectangularize(int[] a, int rows, int cols){
+		
+	}
 }
