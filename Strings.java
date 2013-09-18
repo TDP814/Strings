@@ -34,18 +34,18 @@ public class Strings {
 	}
 
 	public static boolean isAbcdarian(String str){
-		for (int i=0; i<str.length(); i++) {
-			if (i+1 > str.length()) {
+		for (int i=0; i<str.length()-1; i++) {
+			// if (i+1 > str.length()) {
 				if (str.charAt(i) < str.charAt(i+1)) {
 					is = true;
 				}else{
 					return false;
 				}
-			}else{
-				if (str.charAt(str.length()-1) >= str.charAt(str.length())) {
-					return false;
-				}
-			}
+			// }else{
+				// if (str.charAt(str.length()-1) >= str.charAt(str.length())) {
+					// return false;
+				// }
+			// }
 		}
 		return true;
 	}
