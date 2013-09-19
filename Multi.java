@@ -12,7 +12,12 @@ public class Multi {
 		// System.out.println("Reversed row ");
 		// print(a);
 
-		print(snakeDraft(10, 3));
+		int[][] a = snakeDraft(10,3);
+		print(a);
+		int [] r = {1,2,3,4,5,6};
+		int[][] k = rectangularize(r,3,2);
+		System.out.println("rectangularize");
+		print(k);
 
 	}
 	
@@ -66,20 +71,47 @@ public class Multi {
 	}
 
 	public static int[][] snakeDraft(int players, int rounds){
-		int[][] a = 0;
-		for (int i=0; i<rounds; i++) {
-			for (int j=0; j<players; j++) {
-				if (i % 2 == 1) {
-					a[i][j] = (players - j);
-				}else{
-					a[i][j] = (players +1);
+		int[][] b = new int[rounds][players];
+		int counter =1;
+		for (int irow=0; irow<b.length; irow++) {
+			if (irow%2==0) {
+				for (int icol=0; icol<b[irow].length; irow++) {
+					b[irow][icol]= counter;
+					counter+=1;
+				}
+			}else{
+				for (int icol=b[irow].length; icol>=0; icol--) {
+					b[irow][icol]=counter;
+					counter+=1;
 				}
 			}
 		}
-		return a;
+		return b;
 	}
 
-	public static int[][] rectangularize(int[] a, int rows, int cols){
-		
+	public static int[][] rectangularize(int[] r, int rows, int cols){
+		int[][] t5= new int[rows][cols];
+		int count = 0;
+		for (int i=0; i<t.length; i++) {
+			for (int j=0; j<t5[i].length; j++) {
+				if (count<r.length) {
+					t5[i][j] = r[count];
+					count+=1;
+				} else{
+					t5[i][j]=0;
+				}
+			}
+		}
+		return t5;
+	}
+
+	public static boolean print(int[][] a){
+		for (int r=0; r<a.length; r++) {
+			for (int c=0; c<a[r].length; c++) {
+				System.out.print(a[r][c] + " ");
+			}
+			System.out.println();
+		}
+		return true;
 	}
 }
