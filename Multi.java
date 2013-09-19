@@ -12,12 +12,12 @@ public class Multi {
 		// System.out.println("Reversed row ");
 		// print(a);
 
-		int[][] a = snakeDraft(10,3);
-		print(a);
+		int[][] b = snakeDraft(10,3);
+		print2(a);
 		int [] r = {1,2,3,4,5,6};
 		int[][] k = rectangularize(r,3,2);
 		System.out.println("rectangularize");
-		print(k);
+		print2(k);
 
 	}
 	
@@ -92,7 +92,7 @@ public class Multi {
 	public static int[][] rectangularize(int[] r, int rows, int cols){
 		int[][] t5= new int[rows][cols];
 		int count = 0;
-		for (int i=0; i<t.length; i++) {
+		for (int i=0; i<t5.length; i++) {
 			for (int j=0; j<t5[i].length; j++) {
 				if (count<r.length) {
 					t5[i][j] = r[count];
@@ -105,7 +105,7 @@ public class Multi {
 		return t5;
 	}
 
-	public static boolean print(int[][] a){
+	public static boolean print2(int[][] a){
 		for (int r=0; r<a.length; r++) {
 			for (int c=0; c<a[r].length; c++) {
 				System.out.print(a[r][c] + " ");
